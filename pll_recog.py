@@ -32,10 +32,7 @@ def next_colour(colour: str) -> str:
     return next[colour]
 
 def rotate(text: str) -> str:
-    rotated = ""
-    for colour in text:
-        rotated += next_colour(colour)
-    return rotated
+    return "".join([next_colour(i) for i in text])
 
 def check_pll(text: str) -> str:
     for key in pll:
